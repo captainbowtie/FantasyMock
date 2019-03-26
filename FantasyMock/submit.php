@@ -39,10 +39,9 @@ $team4 = sanitize_string($_POST["team4"]);
 $team5 = sanitize_string($_POST["team5"]);
 $team6 = sanitize_string($_POST["team6"]);
 $team7 = sanitize_string($_POST["team7"]);
-$team8 = sanitize_string($_POST["team8"]);
 
-$insertString = "INSERT INTO teams(name,email,team0,team1,team2,team3,team4,team5,team6,team7,team8) "
-            . "VALUES($name,$email,$team0,$team1,$team2,$team3,$team4,$team5,$team6,$team7,$team8)";
+$insertString = "INSERT INTO teams(name,email,team0,team1,team2,team3,team4,team5,team6,team7) "
+            . "VALUES($name,$email,$team0,$team1,$team2,$team3,$team4,$team5,$team6,$team7)";
 
 $db->query($insertString);
         
@@ -52,4 +51,3 @@ function sanitize_string($string) {
     }
     return htmlentities($string);
 }
-

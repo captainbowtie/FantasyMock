@@ -16,82 +16,87 @@ You should have received a copy of the GNU Affero General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <html>
-    <head>
-        <title>Fantasy Mock Trial</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    </head>
-    <body>
-        <div>
-            <table>
-                <tr>
-                    <td>Team Name: </td>
-                    <td><input></td>
-                </tr>
-                <tr>
-                    <td>Email/Perjuries Username: </td>
-                    <td><input></td>
-                </tr>
-            </table>
-            <table>
-                <tr>
-                    <td><b>Team</b></td>
-                    <td><b>ORCS</b></td>
-                    <td><b>Cost</b></td>
-                </tr>
-                <tr>
-                    <td><select id="select0" class="teamSelect"></select></td>
-                    <td id="orcs0">N/A</td>
-                    <td  id="cost0">0.00</td>
-                </tr>
-                <tr>
-                    <td><select id="select1" class="teamSelect"></select></td>
-                    <td id="orcs1">N/A</td>
-                    <td  id="cost1">0.00</td>
-                </tr>
-                <tr>
-                    <td><select id="select2" class="teamSelect"></select></td>
-                    <td id="orcs2">N/A</td>
-                    <td  id="cost2">0.00</td>
-                </tr>
-                <tr>
-                    <td><select id="select3" class="teamSelect"></select></td>
-                    <td id="orcs3">N/A</td>
-                    <td  id="cost3">0.00</td>
-                </tr>
-                <tr>
-                    <td><select id="select4" class="teamSelect"></select></td>
-                    <td id="orcs4">N/A</td>
-                    <td  id="cost4">0.00</td>
-                </tr>
-                <tr>
-                    <td><select id="select5" class="teamSelect"></select></td>
-                    <td id="orcs5">N/A</td>
-                    <td  id="cost5">0.00</td>
-                </tr>
-                <tr>
-                    <td><select id="select6" class="teamSelect"></select></td>
-                    <td id="orcs6">N/A</td>
-                    <td  id="cost6">0.00</td>
-                </tr>
-                <tr>
-                    <td><select id="select7" class="teamSelect"></select></td>
-                    <td id="orcs7">N/A</td>
-                    <td  id="cost7">0.00</td>
-                </tr>
-                <tr>
-                    <td><select id="select8" class="teamSelect"></select></td>
-                    <td id="orcs8">N/A</td>
-                    <td id="cost8">0.00</td>
-                </tr>
-                <tr>
-                    <td><input id="button" type="button" value="Submit"></td>
-                    <td id="orcsValidator">🔴</td>
-                    <td id="totalCost">0.00</td>
-                </tr>
-            </table>
-        </div>
-        <script src="./fantasy.js"></script>
-    </body>
+  <head>
+    <title>Fantasy Mock Trial</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  </head>
+  <body>
+    <div>
+      <table>
+        <tr>
+          <td>Team Name:</td>
+          <td><input /></td>
+        </tr>
+        <tr>
+          <td>Email/Perjuries Username:</td>
+          <td><input /></td>
+        </tr>
+      </table>
+
+      <table>
+        <tr>
+          <td><b>Team</b></td>
+          <td><b>Division</b></td>
+          <td><b>Cost</b></td>
+          <td><b>ORCS Carryover</b></td>
+        </tr>
+        <tr>
+          <td><select id="select0" class="teamSelect"></select></td>
+          <td id="division0">N/A</td>
+          <td id="cost0">0.00</td>
+          <td><input class="check" type="checkbox" id="orcs0" /></td>
+        </tr>
+        <tr>
+          <td><select id="select1" class="teamSelect"></select></td>
+          <td id="division1">N/A</td>
+          <td id="cost1">0.00</td>
+          <td><input class="check" type="checkbox" id="orcs1" /></td>
+        </tr>
+        <tr>
+          <td><select id="select2" class="teamSelect"></select></td>
+          <td id="division2">N/A</td>
+          <td id="cost2">0.00</td>
+          <td><input class="check" type="checkbox" id="orcs2" /></td>
+        </tr>
+        <tr>
+          <td><select id="select3" class="teamSelect"></select></td>
+          <td id="division3">N/A</td>
+          <td id="cost3">0.00</td>
+          <td><input class="check" type="checkbox" id="orcs3" /></td>
+        </tr>
+        <tr>
+          <td><select id="select4" class="teamSelect"></select></td>
+          <td id="division4">N/A</td>
+          <td id="cost4">0.00</td>
+          <td><input class="check" type="checkbox" id="orcs4" /></td>
+        </tr>
+        <tr>
+          <td><select id="select5" class="teamSelect"></select></td>
+          <td id="division5">N/A</td>
+          <td id="cost5">0.00</td>
+          <td><input class="check" type="checkbox" id="orcs5" /></td>
+        </tr>
+        <tr>
+          <td><select id="select6" class="teamSelect"></select></td>
+          <td id="division6">N/A</td>
+          <td id="cost6">0.00</td>
+          <td><input class="check" type="checkbox" id="orcs6" /></td>
+        </tr>
+        <tr>
+          <td><select id="select7" class="teamSelect"></select></td>
+          <td id="division7">N/A</td>
+          <td id="cost7">0.00</td>
+          <td><input class="check" type="checkbox" id="orcs7" /></td>
+        </tr>
+        <tr>
+          <td><input id="button" type="button" value="Submit" /></td>
+          <td id="divisionValidator">🔴</td>
+          <td id="totalCost">0.00</td>
+        </tr>
+      </table>
+    </div>
+    <script src="./fantasy.js"></script>
+  </body>
 </html>
